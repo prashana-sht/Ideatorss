@@ -10,6 +10,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">  </head>
 
   <body>
-    <%= yield %>
+    <div id = "wrap">
+      <%= render 'shared/nav' %>
+      <div class = "container">
+        <%= yield %>
+      </div>
+  
+    </div>
+    <%= render 'shared/footer' %>
+  
+  </body>
+  </html>
   </body>
 </html>
