@@ -1,9 +1,10 @@
  <h2> Ideas with Author </h2>
-
+ 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add Idea
 </button>
+<br> <br>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,9 +43,13 @@
       <p><%= idea.description %></p>
       <footer class="blockquote-footer">by <%= idea.author %></footer>
     </blockquote>
+    <br>
+    <%= link_to 'Delete', idea_path(idea), class: 'btn btn-sm btn-danger', data: {"turbo-confirm": "Are you sure?", "turbo-method": :delete} %>
+    <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
   </div>
 </div>
 <% end %>
+
 
 
 
